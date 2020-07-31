@@ -10,28 +10,16 @@ function playGame(playerInput){
     } else if (argMoveId == 3) {
       return 'nożyce'
     }
-  }  // printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-      // return 'nieznany ruch';
-    // }
+  }
 
   function displayResult(argComputerMove, argPlayerMove) {
-    if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+    if((argComputerMove == 'kamień' && argPlayerMove == 'papier')||(argComputerMove == 'papier' && argPlayerMove == 'nożyce')||(argComputerMove == 'nożyce' && argPlayerMove == 'kamień')){
       return 'Ty wygrywasz!';
-    } else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
+    } else if ((argComputerMove == 'kamień' && argPlayerMove == 'nożyce')||(argComputerMove == 'papier' && argPlayerMove == 'kamień')||(argComputerMove == 'nożyce' && argPlayerMove == 'papier')){
       return 'Komputer wygrywa!';
-    } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
-      return 'Ty wygrywasz!';
-    } else if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
-      return 'Komputer wygrywa!';
-    } else if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
-      return 'Komputer wygrywa!';
-    } else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
-      return 'Ty wygrywasz!';
-    } else if (argComputerMove == argPlayerMove) {
-      return 'Remis!';
     } else {
-      return 'Runda nierozstrzygnięta! Spróbuj jeszcze raz.';
-      }
+      return 'Remis!';
+    }
   }
 
   let randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -42,7 +30,6 @@ function playGame(playerInput){
   printMessage('Ruch komputera to: ' + computerMove);
 
   /* Player move */
-  // let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
   console.log('Gracz wpisał: ' + playerInput);
   let playerMove = getMoveName(playerInput);
   printMessage('Twój ruch to: ' + playerMove);
@@ -50,8 +37,6 @@ function playGame(playerInput){
   /* Displaying Result */
   printMessage(displayResult(computerMove, playerMove));
 }
-
-
 
 function clickedRock() {
   playGame(1);
@@ -65,10 +50,6 @@ function clickedScissors() {
   playGame(3);
 }
 
-let buttonRock = document.getElementById('play-rock');
-let buttonPaper = document.getElementById('play-paper');
-let buttonScissors = document.getElementById('play-scissors');
-
-buttonRock.addEventListener('click', clickedRock);
-buttonPaper.addEventListener('click', clickedPaper);
-buttonScissors.addEventListener('click', clickedScissors);
+document.getElementById('play-rock').addEventListener('click', clickedRock);
+document.getElementById('play-paper').addEventListener('click', clickedPaper);
+document.getElementById('play-scissors').addEventListener('click', clickedScissors);
