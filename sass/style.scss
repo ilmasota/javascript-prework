@@ -1,0 +1,95 @@
+/* Variables */
+
+$color-main: #FFBE0B;
+$color-title-section: #FB5607;
+$color-button: #8338EC;
+
+/* Global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  margin: 0;
+}
+
+.row {
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  text-align: center;
+  padding: 5px 0;
+}
+
+h1 {
+  margin: 0;
+  color: $color-main;
+}
+
+h4 {
+  margin: 0;
+  color: $color-title-section;
+}
+
+.section {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.row {
+  margin: 0;
+}
+
+/* Welcome */
+
+header {
+  background-image: url("../images/fingers-149295_960_720.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  height: 50%;
+}
+
+.title {
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Instructions */
+
+.instr {
+  padding-bottom: 15px;
+}
+
+/* buttons */
+
+.btn {
+  background-color: $color-button;
+}
+
+/* Messages */
+
+.messages {
+  padding-top: 10px;
+}

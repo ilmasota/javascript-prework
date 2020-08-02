@@ -3,16 +3,31 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+	<link rel="stylesheet" href="/vendor/bootstrap-grid.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="container">
-		<div id="buttons">
-			<button id="play-rock">Kamień</button>
-			<button id="play-paper">Papier</button>
-			<button id="play-scissors">Nożyce</button>
+	<header>
+		<div class="title row">
+			<h1>Kamień, papier, nożyce</h1>
 		</div>
-		<div id="messages"></div>
+	</header>
+	<div class="section instr">
+		<div class="instructions">
+			<h4>Instrukcje</h4>
+			<p>Papier wygrywa z kamieniem,</p>
+			<p>Kamień wygrywa z nożycami,</p>
+			<p>Nożyce wygrywają z papierem,</p>
+			<p>Spróbuj pokonać komputer!</p>
+		</div>
+	</div>
+	<div class="section">
+		<div id="buttons" class="row">
+			<button id="play-rock" class="btn">Kamień</button>
+			<button id="play-paper" class="btn">Papier</button>
+			<button id="play-scissors" class="btn">Nożyce</button>
+		</div>
+		<div id="messages" class="messages"></div>
   </div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
