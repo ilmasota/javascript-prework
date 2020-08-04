@@ -1,3 +1,9 @@
+const displayResults = {
+  'rounds' : 0,
+  'playerWins' : 0,
+  'computerWins' : 0
+}
+
 function playGame(playerInput){
 
   clearMessages();
@@ -14,10 +20,15 @@ function playGame(playerInput){
 
   function displayResult(argComputerMove, argPlayerMove) {
     if((argComputerMove == 'kamień' && argPlayerMove == 'papier')||(argComputerMove == 'papier' && argPlayerMove == 'nożyce')||(argComputerMove == 'nożyce' && argPlayerMove == 'kamień')){
+      displayResults.rounds = displayResults.rounds + 1;
+      displayResults.playerWins = displayResults.playerWins + 1;
       return 'Ty wygrywasz!';
     } else if ((argComputerMove == 'kamień' && argPlayerMove == 'nożyce')||(argComputerMove == 'papier' && argPlayerMove == 'kamień')||(argComputerMove == 'nożyce' && argPlayerMove == 'papier')){
+      displayResults.rounds = displayResults.rounds + 1;
+      displayResults.computerWins = displayResults.computerWins + 1;
       return 'Komputer wygrywa!';
     } else {
+      displayResults.rounds = displayResults.rounds + 1;
       return 'Remis!';
     }
   }
@@ -36,6 +47,7 @@ function playGame(playerInput){
 
   /* Displaying Result */
   printMessage(displayResult(computerMove, playerMove));
+  printMessage('liczba rund: ' + displayResults.rounds + ", komputer: " + displayResults.computerWins + ", Ty: " + displayResults.playerWins);
 }
 
 function clickedRock() {
