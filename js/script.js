@@ -1,9 +1,9 @@
 'use strict';
 {
   const displayResults = {
-    'rounds' : 0,
-    'playerWins' : 0,
-    'computerWins' : 0
+    rounds : 0,
+    playerWins : 0,
+    computerWins : 0
   }
 
   const playGame = function(playerInput){
