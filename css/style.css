@@ -4,26 +4,13 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
-  height: 100%;
   margin: 0;
 }
 
 .container {
   text-align: center;
   margin: 0;
-}
-
-.row {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: center;
-      justify-content: center;
-  text-align: center;
 }
 
 p {
@@ -47,10 +34,6 @@ h4 {
   text-align: center;
 }
 
-.row {
-  margin: 0;
-}
-
 /* Welcome */
 header {
   background-image: url("../images/fingers-149295_960_720.png");
@@ -65,7 +48,7 @@ header {
   -ms-flex-align: center;
       align-items: center;
   margin: 0;
-  height: 50%;
+  padding: 150px 0;
 }
 
 .title {
@@ -83,6 +66,13 @@ header {
 }
 
 /* buttons */
+.btns {
+  -ms-flex-pack: center;
+      justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+
 .btn {
   background-color: #8338EC;
 }

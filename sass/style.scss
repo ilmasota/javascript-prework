@@ -10,24 +10,13 @@ $color-button: #8338EC;
     box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
-  height: 100%;
   margin: 0;
 }
 
 .container {
   text-align: center;
   margin: 0;
-}
-
-.row {
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
 }
 
 p {
@@ -51,10 +40,6 @@ h4 {
   text-align: center;
 }
 
-.row {
-  margin: 0;
-}
-
 /* Welcome */
 
 header {
@@ -67,7 +52,7 @@ header {
   flex-direction: column;
   align-items: center;
   margin: 0;
-  height: 50%;
+  padding: 150px 0;
 }
 
 .title {
@@ -83,6 +68,12 @@ header {
 }
 
 /* buttons */
+
+.btns {
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
 
 .btn {
   background-color: $color-button;
